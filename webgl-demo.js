@@ -4,8 +4,8 @@ import { drawScene } from "./draw-scene.js";
 
 function main() {
 
-    let squareRotation = 0.0;
-let deltaTime = 0;
+    let cubeRotation = 0.0;
+    let deltaTime = 0;
 
   const canvas = document.querySelector("#gl-canvas");
   // Initialize the GL context
@@ -83,8 +83,8 @@ function render(now) {
   deltaTime = now - then;
   then = now;
 
-  drawScene(gl, programInfo, buffers, squareRotation);
-  squareRotation += deltaTime;
+  drawScene(gl, programInfo, buffers, cubeRotation);
+  cubeRotation += deltaTime;
 
   requestAnimationFrame(render);
 }
